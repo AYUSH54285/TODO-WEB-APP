@@ -1,0 +1,23 @@
+body{
+    min-height:100vh;
+}
+#loading[hidden]{
+    display:none !important;
+}
+/* table rows wrap */
+#todosTable td:nth-child(2){
+    max-width:480px;
+    white-space: normal;
+}
+/* completed styling */
+.todo-completed{
+    text-decoration:line-through;
+    color:#6c757d;
+}
+/* Responsive Tweaks */
+@media (max-width:576px){
+    #todosTable th:nth-child(5),
+    #todosTable td:nth-child(5){
+        display:none; /* hide userId column on xs*/
+    }
+}
