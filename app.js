@@ -12,23 +12,24 @@ let allTodos = [];
 let filteredTodos =[];
 let currentPage =1;
 
-const alertContainer = document.querySelector('#alert-container');
-const loadingE1 = document.querySelector('#loading');
-const tbody = document.querySelector('#todosTbody');
-const paginationE1 = document.querySelector('#pagination');
-const paginationInfo = document.querySelector('#pagination-info');
+const alertContainer = document.getElementById('alert-container');
+const loadingE1 = document.getElementById('loading');
+const tbody = document.getElementById('todosTbody');
+const paginationEl = document.getElementById('pagination');
+const paginationInfo = document.getElementById('pagination-info');
 
 // Filters Control
-const searchInput = document.querySelector('#searchInput');
-const fromDateInput = document.querySelector('#fromDate');
-const toDateInput = document.querySelector('#toDate');
-const clearFiltersBtn = document.querySelector('#clearFiltersBtn');
+const searchInput = document.getElementById('searchInput');
+const fromDateInput = document.getElementById('fromDate');
+const toDateInput = document.getElementById('toDate');
+const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+
 
 //Add form controls
-const addTodoForm = document.querySelector('#add-todo-form');
-const newTodoText = document.querySelector('#newTodoText');
-const newTodoDate = document.querySelector('#newTodoDate');
-const newTodoCompleted = document.querySelector('#newTodoCompleted');
+const addTodoForm = document.getElementById('add-todo-form');
+const newTodoText = document.getElementById('newTodoText');
+const newTodoDate = document.getElementById('newTodoDate');
+const newTodoCompleted = document.getElementById('newTodoCompleted');
 
 //utilities
 function todayISO(){
@@ -60,7 +61,7 @@ function showAlert(message, type='info', timeoutMs=4000){
 }
 
 function setLoading(isLoading){
-    LoadingE1.hidden = !isLoading;
+    loadingE1.hidden = !isLoading;
 }
 
 function saveLocal(todos){
